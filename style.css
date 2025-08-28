@@ -6,6 +6,13 @@
       --gray-light: #f5f5f5;
     }
 
+    @font-face {
+  font-family: 'Biennale'; /* Name you will use in CSS */
+  src: url('65.\ Biennale\ Font/') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -13,7 +20,7 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Biennale', sans-serif;
       background: #fff;
       color: var(--text-dark);
       line-height: 1.6;
@@ -110,7 +117,7 @@
     /* Hero Section */
     .hero {
       padding: 6rem 5% 8rem;
-      text-align: center;
+      text-align: left;
       position: relative;
     }
 
@@ -123,6 +130,10 @@
     }
     
     .box-1 {
+      display: flex;
+    }
+
+    .box-2{
       display: flex;
     }
 
@@ -139,7 +150,7 @@
 
     .btn1{
       height: 60px;
-      width: 200px;
+      width: 350px;
       display: inline-block;
       padding: 1rem 2rem;
       background: #ffd400;
@@ -234,7 +245,7 @@
 
     /* Trusted Section */
     .trusted {
-      background: var(--primary-blue);
+      background:#092c5b;
       color: #fff;
       text-align: center;
       padding: 4rem;
@@ -314,7 +325,7 @@
 
     /* Card Slider Section */
     .card-slider-section {
-      padding: 2rem 5%;
+      padding: 2rem 0%;
       padding-left: 20rem;
       background: #f9f9f9;
     }
@@ -328,7 +339,7 @@
 
     .slider-controls button {
       padding: 0.5rem 1rem;
-      background: #1860cc;
+      background: #092c5b;
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -387,7 +398,8 @@
 /* Tablet Devices */
 @media (max-width: 768px) {
 
-      /* Prevent horizontal scrolling */
+
+    /* Prevent horizontal scrolling */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -450,8 +462,7 @@ img, video {
 
 /* Mobile Devices */
 @media (max-width: 480px) {
-
-      /* Prevent horizontal scrolling */
+    /* Prevent horizontal scrolling */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -564,5 +575,3 @@ img, video {
     width: 100%;
   }
 }
-
-
