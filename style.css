@@ -386,6 +386,20 @@
 
 /* Tablet Devices */
 @media (max-width: 768px) {
+
+      /* Prevent horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make images & videos responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
   /* Hero section */
   .hero {
     padding: 4rem 5% 6rem;
@@ -536,3 +550,4 @@
     width: 100%;
   }
 }
+
