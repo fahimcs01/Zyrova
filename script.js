@@ -1,16 +1,17 @@
- // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
+   // Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
 
-    menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
-    nav.addEventListener('click', e => { if(e.target.tagName === 'A') nav.classList.remove('active'); });
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
 
-    // Header scroll effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
-    });
+// Close menu when a link is clicked
+nav.addEventListener('click', e => {
+  if(e.target.tagName === 'A') nav.classList.remove('active');
+});
+
+
 
     // Fade in on scroll
     const observer = new IntersectionObserver((entries) => {
@@ -57,3 +58,5 @@ document.querySelectorAll('.card').forEach(card => {
     video.currentTime = 0;
   });
 });
+
+
