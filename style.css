@@ -383,3 +383,156 @@
   transform: scale(1.05);
 }
 
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+  /* Hero section */
+  .hero {
+    padding: 4rem 5% 6rem;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  
+  .hero-subtitle {
+    max-width: 90%;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: 2rem;
+  }
+
+  /* Video Section */
+  .video-container {
+    max-height: 60vh;
+  }
+
+  .video-container video {
+    padding: 0;
+  }
+
+  /* Logo row */
+  .logo-row {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-box {
+    width: 90px;
+    height: 60px;
+  }
+
+  /* Card slider section */
+  .card-slider-section {
+    padding: 2rem 5%;
+    padding-left: 5%;
+  }
+
+  .card {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  /* Hero section */
+  .hero {
+    padding: 3rem 3% 4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Video Section */
+  .video-container {
+    max-height: 40vh;
+  }
+
+  .video-container video {
+    padding: 0;
+  }
+
+  /* Logo row */
+  .logo-row {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-box {
+    width: 70px;
+    height: 50px;
+  }
+
+  /* Card slider section */
+  .card-slider-section {
+    padding: 1.5rem 3%;
+    padding-left: 3%;
+  }
+
+  .card {
+    width: 250px;
+    height: 350px;
+    font-size: 1rem;
+  }
+
+  /* Slider buttons */
+  .slider-controls button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Show hamburger icon on mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* hidden by default */
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+    box-shadow: -2px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav.active {
+    height: 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #1860cc;
+    right: 0; /* slide in from right */
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
